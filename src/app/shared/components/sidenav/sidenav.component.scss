@@ -90,3 +90,9 @@ ion-note {
 ion-item.selected {
   --color: var(--ion-color-primary);
 }
+
+ion-item-group {
+  margin-top: 20px;
+  border-top: 1px solid rgba(var(--ion-color-dark-rgb, 47, 47, 47), 0.08);
+  padding-top: 10px;
+}
