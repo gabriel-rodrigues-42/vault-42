@@ -39,6 +39,6 @@ export class SidenavComponent implements OnInit {
   }
 
   private setDarkTheme(isDark: boolean) {
-    document.documentElement.classList.toggle('dark', isDark);
+    document.documentElement.classList.toggle('ion-palette-dark', isDark);
   }
 }
