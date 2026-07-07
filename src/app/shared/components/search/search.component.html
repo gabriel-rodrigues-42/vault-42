@@ -10,6 +10,7 @@
       (ionInput)="onSearchInput($event)"
       (ionClear)="onSearchClear()"
       [(ngModel)]="searchTerm"
+      aria-label="Search seeds and plants"
     ></ion-searchbar>
   </ion-toolbar>
   @if (products$ | async; as products) {
@@ -22,7 +23,7 @@
           <ion-item [routerLink]="['/product', product.slug]" (click)="onSearchClear()">
             @if (product.image?.path) {
               <ion-avatar aria-hidden="true" slot="start">
-                <img [src]="product.image!.path | assetImageUrl" />
+                <img [src]="product.image!.path | assetImageUrl" [alt]="product.name" />
               </ion-avatar>
             }
             <ion-label>

@@ -11,6 +11,7 @@
               [alt]="product.name"
               *ngIf="product.image"
               [src]="product.image.path | assetImageUrl"
+              loading="lazy"
             />
             <ion-card-header>
               <ion-card-title>{{ product.name }}</ion-card-title>

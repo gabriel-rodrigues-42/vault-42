@@ -11,6 +11,7 @@
               [alt]="category.title"
               *ngIf="category.Image"
               [src]="category.Image.path | assetImageUrl"
+              loading="lazy"
             />
             <ion-card-header>
               <ion-card-title>{{ category.title }}</ion-card-title>
