@@ -36,4 +36,31 @@ describe('SidenavComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should toggle dark mode state and update document class list', () => {
+    spyOn(document.documentElement.classList, 'toggle');
+    spyOn(localStorage, 'setItem');
+
+    // Toggle on
+    const mockEvent = { detail: { checked: true } };
+    component.toggleDarkMode(mockEvent);
+
+    expect(component.isDarkMode()).toBeTrue();
+    expect(document.documentElement.classList.toggle).toHaveBeenCalledWith(
+      'ion-palette-dark',
+      true,
+    );
+    expect(localStorage.setItem).toHaveBeenCalledWith('theme', 'dark');
+
+    // Toggle off
+    const mockEventOff = { detail: { checked: false } };
+    component.toggleDarkMode(mockEventOff);
+
+    expect(component.isDarkMode()).toBeFalse();
+    expect(document.documentElement.classList.toggle).toHaveBeenCalledWith(
+      'ion-palette-dark',
+      false,
+    );
+    expect(localStorage.setItem).toHaveBeenCalledWith('theme', 'light');
+  });
 });
