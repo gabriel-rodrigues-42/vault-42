@@ -18,7 +18,7 @@ import { HeroSectionComponent } from '@app/shared/components/hero-section/hero-s
     AboutPageRoutingModule,
     SearchComponent,
     HeroSectionComponent,
+    AboutPage,
   ],
-  declarations: [AboutPage],
 })
 export class AboutPageModule {}

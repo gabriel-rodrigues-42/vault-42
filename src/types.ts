@@ -12,10 +12,9 @@ export type MakeOptional<T, K extends keyof T> = Omit<T, K> & {
 export type MakeMaybe<T, K extends keyof T> = Omit<T, K> & {
   [SubKey in K]: Maybe<T[SubKey]>;
 };
-export type MakeEmpty<
-  T extends { [key: string]: unknown },
-  K extends keyof T,
-> = { [_ in K]?: never };
+export type MakeEmpty<T extends { [key: string]: unknown }, K extends keyof T> = {
+  [_ in K]?: never;
+};
 export type Incremental<T> =
   | T
   | {
@@ -323,9 +322,7 @@ export type CreateTsStaticSiteInput = {
   _version?: InputMaybe<Scalars['Int']['input']>;
   baseUrl?: InputMaybe<Scalars['String']['input']>;
   destination: Scalars['String']['input'];
-  environmentVariables?: InputMaybe<
-    Array<InputMaybe<TsStaticSiteEnvironmentVariablesInput>>
-  >;
+  environmentVariables?: InputMaybe<Array<InputMaybe<TsStaticSiteEnvironmentVariablesInput>>>;
   idKey?: InputMaybe<Scalars['String']['input']>;
   privateAcl?: InputMaybe<Scalars['Boolean']['input']>;
   provider?: Scalars['String']['input'];
@@ -502,9 +499,7 @@ export type DuplicateTsStaticSiteInput = {
   _version?: InputMaybe<Scalars['Int']['input']>;
   baseUrl?: InputMaybe<Scalars['String']['input']>;
   destination?: InputMaybe<Scalars['String']['input']>;
-  environmentVariables?: InputMaybe<
-    Array<InputMaybe<TsStaticSiteEnvironmentVariablesInput>>
-  >;
+  environmentVariables?: InputMaybe<Array<InputMaybe<TsStaticSiteEnvironmentVariablesInput>>>;
   idKey?: InputMaybe<Scalars['String']['input']>;
   privateAcl?: InputMaybe<Scalars['Boolean']['input']>;
   provider?: InputMaybe<Scalars['String']['input']>;
@@ -1995,9 +1990,7 @@ export type UpdateTsStaticSiteInput = {
   _version?: InputMaybe<Scalars['Int']['input']>;
   baseUrl?: InputMaybe<Scalars['String']['input']>;
   destination?: InputMaybe<Scalars['String']['input']>;
-  environmentVariables?: InputMaybe<
-    Array<InputMaybe<TsStaticSiteEnvironmentVariablesInput>>
-  >;
+  environmentVariables?: InputMaybe<Array<InputMaybe<TsStaticSiteEnvironmentVariablesInput>>>;
   idKey?: InputMaybe<Scalars['String']['input']>;
   privateAcl?: InputMaybe<Scalars['Boolean']['input']>;
   provider?: InputMaybe<Scalars['String']['input']>;

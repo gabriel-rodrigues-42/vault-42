@@ -19,10 +19,7 @@
       </p>
       <ion-list>
         @for (product of products.items; track product._id) {
-          <ion-item
-            [routerLink]="['/product', product.slug]"
-            (click)="onSearchClear()"
-          >
+          <ion-item [routerLink]="['/product', product.slug]" (click)="onSearchClear()">
             @if (product.image?.path) {
               <ion-avatar aria-hidden="true" slot="start">
                 <img [src]="product.image!.path | assetImageUrl" />

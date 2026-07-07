@@ -1,9 +1,4 @@
-import {
-  ChangeDetectionStrategy,
-  Component,
-  OnInit,
-  input,
-} from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnInit, input } from '@angular/core';
 import { GetAllProductsFromCategoryQuery } from '@app/core/graphql/category.graphql.generated';
 import { CategoryService } from '@app/core/category.service';
 import { Observable, map } from 'rxjs';

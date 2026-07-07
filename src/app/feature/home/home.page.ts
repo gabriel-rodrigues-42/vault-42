@@ -1,4 +1,8 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { IonicModule } from '@ionic/angular';
+import { SearchComponent } from '@app/shared/components/search/search.component';
+import { HeroSectionComponent } from '@app/shared/components/hero-section/hero-section.component';
+import { CategoryListComponent } from '@app/feature/categories/components/category-list/category-list.component';
 
 @Component({
   selector: 'app-home',
@@ -17,5 +21,7 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
     </ion-content>
   `,
   changeDetection: ChangeDetectionStrategy.OnPush,
+  standalone: true,
+  imports: [IonicModule, SearchComponent, HeroSectionComponent, CategoryListComponent],
 })
 export class HomePage {}

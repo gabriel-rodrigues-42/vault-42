@@ -13,12 +13,12 @@ describe('CategoryPage', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [CategoryPage],
       imports: [
         IonicModule,
         SearchComponent,
         CategoryDetailComponent,
         ApolloTestingModule,
+        CategoryPage,
       ],
       providers: [
         {

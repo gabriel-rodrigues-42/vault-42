@@ -18,7 +18,7 @@ import { HeroSectionComponent } from '@app/shared/components/hero-section/hero-s
     NotFoundPageRoutingModule,
     SearchComponent,
     HeroSectionComponent,
+    NotFoundPage,
   ],
-  declarations: [NotFoundPage],
 })
 export class NotFoundPageModule {}

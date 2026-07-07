@@ -22,7 +22,7 @@ import { SkeletonLoadingComponent } from '@app/shared/components/skeleton-loadin
     AssetImageUrlPipe,
     SkeletonLoadingComponent,
     ProductListComponent,
+    ProductsPage,
   ],
-  declarations: [ProductsPage],
 })
 export class ProductsPageModule {}

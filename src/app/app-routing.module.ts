@@ -5,8 +5,7 @@ const routes: Routes = [
   {
     path: '',
     pathMatch: 'full',
-    loadChildren: () =>
-      import('./feature/home/home.module').then((m) => m.HomePageModule),
+    loadChildren: () => import('./feature/home/home.module').then((m) => m.HomePageModule),
   },
   {
     path: 'categories',
@@ -25,35 +24,26 @@ const routes: Routes = [
   {
     path: 'products',
     loadChildren: () =>
-      import('./feature/products/pages/products/products.module').then(
-        (m) => m.ProductsPageModule,
-      ),
+      import('./feature/products/pages/products/products.module').then((m) => m.ProductsPageModule),
   },
   {
     path: 'product/:slug',
     loadChildren: () =>
-      import('./feature/products/pages/product/product.module').then(
-        (m) => m.ProductPageModule,
-      ),
+      import('./feature/products/pages/product/product.module').then((m) => m.ProductPageModule),
   },
   {
     path: 'about',
-    loadChildren: () =>
-      import('./feature/about/about.module').then((m) => m.AboutPageModule),
+    loadChildren: () => import('./feature/about/about.module').then((m) => m.AboutPageModule),
   },
   {
     path: '**',
     loadChildren: () =>
-      import('./feature/not-found/not-found.module').then(
-        (m) => m.NotFoundPageModule,
-      ),
+      import('./feature/not-found/not-found.module').then((m) => m.NotFoundPageModule),
   },
 ];
 
 @NgModule({
-  imports: [
-    RouterModule.forRoot(routes, { preloadingStrategy: PreloadAllModules }),
-  ],
+  imports: [RouterModule.forRoot(routes, { preloadingStrategy: PreloadAllModules })],
   exports: [RouterModule],
 })
 export class AppRoutingModule {}

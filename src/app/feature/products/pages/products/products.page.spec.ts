@@ -16,8 +16,8 @@ describe('ProductsPage', () => {
         SearchComponent,
         ProductListComponent,
         ApolloTestingModule,
+        ProductsPage,
       ],
-      declarations: [ProductsPage],
     }).compileComponents();
   });
 
