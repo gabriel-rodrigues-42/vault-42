@@ -6,15 +6,7 @@ import { GetProductListQuery } from '@app/core/graphql/product.graphql.generated
 import { ProductService } from '@app/core/product.service';
 import { AssetImageUrlPipe } from '@app/shared/pipes/asset-image-url.pipe';
 import { InfiniteScrollCustomEvent, IonicModule } from '@ionic/angular';
-import {
-  BehaviorSubject,
-  Observable,
-  debounceTime,
-  map,
-  scan,
-  switchMap,
-  tap,
-} from 'rxjs';
+import { BehaviorSubject, Observable, debounceTime, map, scan, switchMap, tap } from 'rxjs';
 
 @Component({
   selector: 'app-product-list',
@@ -22,13 +14,7 @@ import {
   styleUrls: ['./product-list.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
   standalone: true,
-  imports: [
-    IonicModule,
-    AssetImageUrlPipe,
-    CommonModule,
-    RouterModule,
-    SkeletonLoadingComponent,
-  ],
+  imports: [IonicModule, AssetImageUrlPipe, CommonModule, RouterModule, SkeletonLoadingComponent],
 })
 export class ProductListComponent implements OnInit {
   private productSize = 20;
@@ -41,11 +27,7 @@ export class ProductListComponent implements OnInit {
 
   ngOnInit() {
     this.productList$ = this.productFrom$.pipe(
-      switchMap(
-        (from) =>
-          this.productService.getProductList(this.productSize, from)
-            .valueChanges,
-      ),
+      switchMap((from) => this.productService.getProductList(this.productSize, from).valueChanges),
       debounceTime(500),
       tap(() => {
         if (this.currentInfiniteEvent) {

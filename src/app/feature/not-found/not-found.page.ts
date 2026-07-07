@@ -1,4 +1,7 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { IonicModule } from '@ionic/angular';
+import { SearchComponent } from '@app/shared/components/search/search.component';
+import { HeroSectionComponent } from '@app/shared/components/hero-section/hero-section.component';
 
 @Component({
   selector: 'app-not-found',
@@ -16,5 +19,7 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
     </ion-content>
   `,
   changeDetection: ChangeDetectionStrategy.OnPush,
+  standalone: true,
+  imports: [IonicModule, SearchComponent, HeroSectionComponent],
 })
 export class NotFoundPage {}

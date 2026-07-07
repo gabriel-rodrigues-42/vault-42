@@ -1,14 +1,7 @@
 import { TestBed } from '@angular/core/testing';
-import {
-  ApolloTestingController,
-  ApolloTestingModule,
-} from 'apollo-angular/testing';
+import { ApolloTestingController, ApolloTestingModule } from 'apollo-angular/testing';
 import { ProductService } from './product.service';
-import {
-  GetProductListBySlugGQL,
-  GetProductListGQL,
-  GetProductsQueryGQL,
-} from 'src/types';
+import { GetProductListBySlugGQL, GetProductListGQL, GetProductsQueryGQL } from 'src/types';
 
 describe('ProductService', () => {
   let productService: ProductService;

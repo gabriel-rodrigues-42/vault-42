@@ -12,9 +12,7 @@
             />
             <section class="product-card-title">
               <h1>{{ product.items[0].name }}</h1>
-              <ion-badge color="primary"
-                >{{ product.items[0].price }} €</ion-badge
-              >
+              <ion-badge color="primary">{{ product.items[0].price }} €</ion-badge>
             </section>
             <h4 class="product-card-description">
               {{ product.items[0].description }}
@@ -22,14 +20,10 @@
             @if (countdown$ | async; as countdown) {
               <p>Order now and get delivered by tomorrow!</p>
               <p>
-                Time left: {{ countdown.hours }}h {{ countdown.minutes }}m
-                {{ countdown.seconds }}s
+                Time left: {{ countdown.hours }}h {{ countdown.minutes }}m {{ countdown.seconds }}s
               </p>
             }
-            <ion-button
-              color="primary"
-              (click)="onAddToCard(product.items[0].name)"
-            >
+            <ion-button color="primary" (click)="onAddToCard(product.items[0].name)">
               Add to Cart
             </ion-button>
           </section>
@@ -57,26 +51,14 @@
       <ion-col size-xs="12">
         <section class="product-card-skeleton ion-padding">
           <section class="product-card-title">
-            <ion-skeleton-text
-              [animated]="true"
-              class="skeleton-title"
-            ></ion-skeleton-text>
+            <ion-skeleton-text [animated]="true" class="skeleton-title"></ion-skeleton-text>
           </section>
           <h1>
-            <ion-skeleton-text
-              [animated]="true"
-              class="skeleton-description"
-            ></ion-skeleton-text>
+            <ion-skeleton-text [animated]="true" class="skeleton-description"></ion-skeleton-text>
           </h1>
           <h4 class="product-card-description">
-            <ion-skeleton-text
-              [animated]="true"
-              class="skeleton-description"
-            ></ion-skeleton-text>
-            <ion-skeleton-text
-              [animated]="true"
-              class="skeleton-description"
-            ></ion-skeleton-text>
+            <ion-skeleton-text [animated]="true" class="skeleton-description"></ion-skeleton-text>
+            <ion-skeleton-text [animated]="true" class="skeleton-description"></ion-skeleton-text>
           </h4>
         </section>
       </ion-col>

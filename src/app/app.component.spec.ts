@@ -8,9 +8,8 @@ import { AppComponent } from './app.component';
 describe('AppComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [AppComponent],
       schemas: [CUSTOM_ELEMENTS_SCHEMA],
-      imports: [RouterModule.forRoot([])],
+      imports: [RouterModule.forRoot([]), AppComponent],
     }).compileComponents();
   });
 

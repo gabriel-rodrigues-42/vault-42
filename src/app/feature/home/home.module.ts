@@ -20,7 +20,7 @@ import { HeroSectionComponent } from '@app/shared/components/hero-section/hero-s
     SearchComponent,
     CategoryListComponent,
     HeroSectionComponent,
+    HomePage,
   ],
-  declarations: [HomePage],
 })
 export class HomePageModule {}

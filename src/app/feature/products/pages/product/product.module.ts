@@ -20,7 +20,7 @@ import { SearchComponent } from '@app/shared/components/search/search.component'
     AssetImageUrlPipe,
     SearchComponent,
     ProductDetailComponent,
+    ProductPage,
   ],
-  declarations: [ProductPage],
 })
 export class ProductPageModule {}

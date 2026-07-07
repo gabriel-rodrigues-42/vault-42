@@ -16,10 +16,7 @@
             <img
               [alt]="categoryProducts.items[0].category?.title"
               *ngIf="categoryProducts.items[0].category?.Image?.path"
-              [src]="
-                categoryProducts.items[0].category?.Image?.path ?? ''
-                  | assetImageUrl
-              "
+              [src]="categoryProducts.items[0].category?.Image?.path ?? '' | assetImageUrl"
             />
           </ion-avatar>
           <ion-label>

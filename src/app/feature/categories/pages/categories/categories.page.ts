@@ -1,4 +1,7 @@
-import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { IonicModule } from '@ionic/angular';
+import { SearchComponent } from '@app/shared/components/search/search.component';
+import { CategoryListComponent } from '@app/feature/categories/components/category-list/category-list.component';
 
 @Component({
   selector: 'app-categories',
@@ -9,5 +12,7 @@ import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
     </ion-content>
   `,
   changeDetection: ChangeDetectionStrategy.OnPush,
+  standalone: true,
+  imports: [IonicModule, SearchComponent, CategoryListComponent],
 })
 export class CategoriesPage {}

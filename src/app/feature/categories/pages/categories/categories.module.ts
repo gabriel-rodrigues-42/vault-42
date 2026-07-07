@@ -12,7 +12,6 @@ import { SearchComponent } from '@app/shared/components/search/search.component'
 import { CategoryListComponent } from '@app/feature/categories/components/category-list/category-list.component';
 
 @NgModule({
-  declarations: [CategoriesPage],
   imports: [
     CommonModule,
     FormsModule,
@@ -21,6 +20,7 @@ import { CategoryListComponent } from '@app/feature/categories/components/catego
     AssetImageUrlPipe,
     SearchComponent,
     CategoryListComponent,
+    CategoriesPage,
   ],
 })
 export class CategoriesPageModule {}

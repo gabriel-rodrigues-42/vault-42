@@ -1,10 +1,5 @@
 import { CommonModule } from '@angular/common';
-import {
-  ChangeDetectionStrategy,
-  Component,
-  OnInit,
-  input,
-} from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnInit, input } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { CategoryDetailComponent } from '@app/feature/categories/components/category-detail/category-detail.component';
 import { HeroSectionComponent } from '@app/shared/components/hero-section/hero-section.component';

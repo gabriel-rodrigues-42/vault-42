@@ -1,9 +1,5 @@
 import { Injectable } from '@angular/core';
-import {
-  GetProductListBySlugGQL,
-  GetProductListGQL,
-  GetProductsQueryGQL,
-} from 'src/types';
+import { GetProductListBySlugGQL, GetProductListGQL, GetProductsQueryGQL } from 'src/types';
 
 @Injectable({
   providedIn: 'root',

@@ -1,11 +1,7 @@
 import { APOLLO_OPTIONS, ApolloModule } from 'apollo-angular';
 import { HttpLink } from 'apollo-angular/http';
 import { NgModule } from '@angular/core';
-import {
-  ApolloClientOptions,
-  ApolloLink,
-  InMemoryCache,
-} from '@apollo/client/core';
+import { ApolloClientOptions, ApolloLink, InMemoryCache } from '@apollo/client/core';
 import { setContext } from '@apollo/client/link/context';
 import { onError } from '@apollo/client/link/error';
 import { ToastController } from '@ionic/angular';
@@ -18,10 +14,7 @@ const errorLink = onError(({ graphQLErrors, networkError }) => {
   let resultMessage = '';
 
   if (graphQLErrors)
-    graphQLErrors.map(
-      ({ message }) =>
-        (resultMessage += `[GraphQL error]: Message: ${message}`),
-    );
+    graphQLErrors.map(({ message }) => (resultMessage += `[GraphQL error]: Message: ${message}`));
 
   if (networkError) {
     resultMessage += `[Network error]: ${networkError.message}`;

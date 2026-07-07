@@ -1,14 +1,7 @@
 import { TestBed } from '@angular/core/testing';
-import {
-  ApolloTestingController,
-  ApolloTestingModule,
-} from 'apollo-angular/testing';
+import { ApolloTestingController, ApolloTestingModule } from 'apollo-angular/testing';
 import { CategoryService } from './category.service';
-import {
-  GetCategoryListGQL,
-  GetCategoryBySlugGQL,
-  GetAllProductsFromCategoryGQL,
-} from 'src/types';
+import { GetCategoryListGQL, GetCategoryBySlugGQL, GetAllProductsFromCategoryGQL } from 'src/types';
 
 describe('CategoryService', () => {
   let service: CategoryService;
@@ -57,9 +50,7 @@ describe('CategoryService', () => {
   });
 
   it('should call getAllProductsFromCategoryGQL.watch() method with correct arguments', () => {
-    const getAllProductsFromCategoryGQL = TestBed.inject(
-      GetAllProductsFromCategoryGQL,
-    );
+    const getAllProductsFromCategoryGQL = TestBed.inject(GetAllProductsFromCategoryGQL);
     spyOn(getAllProductsFromCategoryGQL, 'watch').and.callThrough();
 
     const slug = 'example-slug';

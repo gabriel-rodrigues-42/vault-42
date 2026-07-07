@@ -1,9 +1,4 @@
-import {
-  ChangeDetectionStrategy,
-  Component,
-  OnInit,
-  input,
-} from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnInit, input } from '@angular/core';
 import { ProductService } from '@app/core/product.service';
 import {
   BehaviorSubject,
@@ -27,13 +22,7 @@ import { FormsModule } from '@angular/forms';
   styleUrls: ['./search.component.scss'],
   standalone: true,
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [
-    AsyncPipe,
-    AssetImageUrlPipe,
-    RouterModule,
-    IonicModule,
-    FormsModule,
-  ],
+  imports: [AsyncPipe, AssetImageUrlPipe, RouterModule, IonicModule, FormsModule],
 })
 export class SearchComponent implements OnInit {
   placeholder = input('Search for seeds and plants');
