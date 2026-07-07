@@ -68,3 +68,22 @@
   --card-width: 200px;
   --card-height: 200px;
 }
+
+@media (prefers-color-scheme: dark) {
+  body {
+    --ion-color-primary: #fac938;
+    --ion-color-primary-rgb: 250, 201, 56;
+    --ion-color-primary-contrast: #000000;
+    --ion-color-primary-contrast-rgb: 0, 0, 0;
+    --ion-color-primary-shade: #dcaf31;
+    --ion-color-primary-tint: #face4c;
+
+    --ion-color-secondary: #1a75b9;
+    --ion-color-secondary-rgb: 26, 117, 185;
+    --ion-color-secondary-contrast: #ffffff;
+    --ion-color-secondary-contrast-rgb: 255, 255, 255;
+    --ion-color-secondary-shade: #1767a3;
+    --ion-color-secondary-tint: #3183c0;
+  }
+}
+
