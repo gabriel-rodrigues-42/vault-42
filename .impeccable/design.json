@@ -1,0 +1,44 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-07-07T18:42:20Z",
+  "title": "Design System: Vault 42",
+  "extensions": {
+    "colorMeta": {
+      "primary": { "role": "primary", "displayName": "Botanical Gold", "canonical": "#f9c322" },
+      "secondary": { "role": "secondary", "displayName": "Water Blue", "canonical": "#0066b1" },
+      "tertiary": { "role": "tertiary", "displayName": "Deep Obsidian", "canonical": "#001423" },
+      "neutral-bg": { "role": "neutral", "displayName": "Botanical Chalk", "canonical": "#ffffff" },
+      "neutral-fg": { "role": "neutral", "displayName": "Deep Charcoal", "canonical": "#2f2f2f" }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Display", "purpose": "Hero headlines only." }
+    },
+    "shadows": [
+      { "name": "interactive-focus", "value": "0 4px 12px rgba(0,20,35,0.08)", "purpose": "Hover focus feedback." }
+    ]
+  },
+  "components": [],
+  "narrative": {
+    "northStar": "The Herbarium Curator",
+    "overview": "A visual system focused on botanical elegance, taxonomic clarity, and premium spacing. It draws inspiration from classic botanical archives and modern museum displays: high-contrast text, structured details, and natural precision. It explicitly rejects the soft, round, pastel-heavy look of mainstream SaaS platforms, choosing sharp structure and deep organic tones instead.",
+    "keyCharacteristics": [
+      "Meticulous information layout (structured grids and tables for botanical specifications).",
+      "Natural premium styling: clean typography paired with generous negative space.",
+      "Restricted use of color: botanical gold serves as a focused spotlight."
+    ],
+    "rules": [
+      { "name": "The Rarity of Gold Rule", "body": "Botanical Gold is used on <=10% of any given screen. Its scarcity is the source of its premium impact.", "section": "colors" },
+      { "name": "The Border-Over-Shadow Rule", "body": "Containers and cards use 1px solid borders rather than drop shadows to divide surfaces at rest.", "section": "elevation" }
+    ],
+    "dos": [
+      "Do display plant care stats (sun, water, soil) in clear, structured lists.",
+      "Do use 1px solid borders to define container limits at rest.",
+      "Do use precise scientific naming alongside common product names."
+    ],
+    "donts": [
+      "Don't use border-radius greater than 16px on cards (Vault 42 rejects 'insanely rounded' UI).",
+      "Don't use side-stripe borders or text color gradients.",
+      "Don't use cartoon plant doodles or low-resolution images."
+    ]
+  }
+}
